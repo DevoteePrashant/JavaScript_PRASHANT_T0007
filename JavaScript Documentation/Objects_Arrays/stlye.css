@@ -1,0 +1,21 @@
+.text-center{
+    text-align: center;
+}
+.header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .pt-2{
+    padding-top: 23px;
+  }
+  .mt-2{
+    margin-top: 23px;
+  }
