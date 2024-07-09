@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./stlye.css">
+    </head>
+    <body>
+        <h3 class="text-center">DOM Manipulation</h3>
+        <p class="text-center">The Document Object Model (DOM) is a programming
+            interface for web documents .</p>
+        <p class="text-center">It represents the page so that programs can
+            change the document structure, style, and content .</p>
+        <p class="text-center">Hello, DOM! (WITHOUT CHANGE)</p>
+        <p id="intro" class="text-center">Hello, DOM!</p>
+        <h3 class="text-center"> DOM Methods </h3>
+        <p class="text-center">DOM methods are actions you can perform on HTML
+            elements</p>
+        <div class="text-center"> <p class="dom">Hello , wold </p>
+            <button type="button" onclick="changeText()">Click Me! </button>
+            <p id="demo"> </p>
+            <button type="button" onclick="textcopy()">Click Me! </button>
+            <div id="hello"></div>
+            <button type="button" onclick="what()">Click Me! </button></div>
+        <h3 class="text-center">DOM Events</h3>
+        <p class="text-center">Events are actions or occurrences that happen in
+            the browser. The browser can respond to these events using
+            JavaScript .</p>
+        <div class="text-center">
+            <p id="demo2">Click the button to trigger an event.</p>
+            <button type="button" onclick="displayDate()">Click Me!</button>
+            <h3 class="text-center">Event Listeners </h3>
+            <p class="text-center">An event listener is a procedure in
+                JavaScript that waits for an event to occur.</p>
+                <p id="demo3">Click me to change my text.</p>
+                <button type="button" id="editbtn" onsubmit="editdata(this)"> Click</button>
+                <h3 class="text-center">Forms and Input Handling</h3>
+<p>JavaScript can be used to validate and handle form inputs before they are sent to a server.
+</p>
+<form id="myForm">
+    Name: <input type="text" id="name"><br><br>
+    <input type="button" onclick="validateForm()" value="Submit">
+  </form>
+  
+  <p id="error"></p>  
+        </div>
+        <script src="./DOM_Manipulation.js"></script>
+    </body>
+</html>
