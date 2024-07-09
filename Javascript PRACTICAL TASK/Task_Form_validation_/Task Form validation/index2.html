@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./validation2.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="handleSubmit(event)" id="form">
+            <h1 class="head">Validation Form</h1>
+            <div class="input-group">
+                <input type="text" placeholder="First Name" id="fname" class="fname" >
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Last Name" id="lname" class="lname" >
+                <div class="error"></div>
+            </div>
+            <br>
+            <div class="input-group">
+                <input type="email" placeholder="Email" id="email" class="email" >
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" id="password" class="password" >
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Confirm Password" id="cpassword" class="cpassword" >
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <input type="submit" class="btn-grad" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script src="./validation2.js"></script>
+</body>
+</html>
