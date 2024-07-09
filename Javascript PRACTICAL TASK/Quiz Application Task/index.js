@@ -9,7 +9,6 @@ const _totalQuestion = document.getElementById('total-question');
 let correctAnswer = "", corerctScore = 0, askedCount = 0, totalQuestion = 10;
 let questions = [];
 
-// load questions from API
 async function loadQuestions(){
     const APIUrl = 'https://opentdb.com/api.php?amount=10'; 
     try {
@@ -23,7 +22,6 @@ async function loadQuestions(){
     }
 }
 
-// event listeners
 function eventListeners(){
     _checkBtn.addEventListener('click', checkAnswer);
     _playAgainBtn.addEventListener('click', restartQuiz);
@@ -36,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function(){
     _correctScore.textContent = correctScore;
 });
 
-// display question and options
 function showQuestion(){
     _checkBtn.disabled = false;
     _result.innerHTML = "";
@@ -61,7 +58,6 @@ function showQuestion(){
     selectOption();
 }
 
-// options selection
 function selectOption(){
     _options.querySelectorAll('li').forEach(function(option){
         option.addEventListener('click', function(){
@@ -74,7 +70,6 @@ function selectOption(){
     });
 }
 
-// answer checking
 function checkAnswer(){
     _checkBtn.disabled = true;
     if(_options.querySelector('.selected')){
@@ -92,7 +87,6 @@ function checkAnswer(){
     }
 }
 
-// to convert html entities into normal text of correct answer if there is any
 function HTMLDecode(textString) {
     let doc = new DOMParser().parseFromString(textString, "text/html");
     return doc.documentElement.textContent;
