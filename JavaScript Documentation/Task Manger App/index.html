@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+  <div class="container">
+    <div class="tab tab-1">
+        <table id="table" border="1">
+            <tr>
+                <th>id</th>
+                <th>First Name</th>
+                <th>description</th>
+                <th>completed </th>
+            </tr>
+        </table>
+    </div>
+    <div class="tab tab-2">
+        id :<input type="number" name="fname" id="id">
+        First Name :<input type="text" name="fname" id="fname">
+        description :<input type="text" name="lname" id="lname">
+        completed  :<input type="checkbox" name="acceptRules" class="inline checkbox" id="checkbox1" value="false">
+        
+        <button onclick="addHtmlTableRow();">Add</button>
+        <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+        <button onclick="removeSelectedRow();">Remove</button>
+    </div>
+</div>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+ <script src="./Task2.js"></script>
+    <script src="./Fibonacci.js"></script>
+    <script src="./Task.js"></script>
+    <script src="./Loop_patna.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>            $('#checkbox-value').text($('#checkbox1').val());
+
+  $("#checkbox1").on('change', function() {
+    if ($(this).is(':checked')) {
+      $(this).attr('value', 'true');
+    } else {
+      $(this).attr('value', 'false');
+    }
+    
+    $('#checkbox-value').text($('#checkbox1').val());
+  });</script>
+ <script src="./Task2.js"></script>
+    <script src="./Fibonacci.js"></script>
+
+    <script src="./Loop_patna.js"></script>
+</body>
+</html>
+

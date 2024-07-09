@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <div class="">
+      <div class=" input-header">
+        <h1 class="text-center">Recipe Management System...</h1>
+        <div class="" >
+          <div class=" text-center  to-do-input">
+            <input type="text" class="form-control input" placeholder="Enter Your Name" aria-label="Recipient's username" id="username"  aria-describedby="button-addon2">
+            <input type="text" class="form-control input" placeholder="Enter Your description" aria-label="Recipient's description" id="description"  aria-describedby="button-addon2">
+            <input type="checkbox" class="form-control input" placeholder="Enter Your description" aria-label="Recipient's description" id="completed"  aria-describedby="button-addon2">
+            <button class="text-white" type="button" id="addUser">Add User</button>
+          </div>
+          <div class="filter ">
+            <div class=" justify-content-between">
+              <div class="\"> 
+              </div><br>
+              <div class="\">
+             
+                <div class="to-do-input text-center">
+                  Search: <input type="search" class="form-control" placeholder="Search..." aria-label="Recipient's username" id="search" >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="display">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="\">#</th>
+                  <th scope="\">Your Name</th>
+                  <th scope="\">description</th>
+                  <th scope="\">completed</th>
+                  <th scope="\">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="records">
+                <!-- <tr>
+                  <th scope="">1</th>
+                  <td>King of Javascript</td>
+                  <td><i class="btn text-white fa fa-edit btn-info mx-2"></i> <i class="btn btn-danger text-white fa fa-trash"></i></td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>            $('#checkbox-value').text($('#completed').val());
+      $("#completed").on('change', function() {
+        if ($(this).is(':checked')) {
+          $(this).attr('value', 'true');
+        } else {
+          $(this).attr('value', 'false');
+        }
+        
+        $('#checkbox-value').text($('#completed').val());
+      });</script>
+    <script src="./Practise_Task_for_array.js"></script>
+</body>
+</html>
