@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Carousel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="lastMain">
-        <a href="./index.html" id="slider">
-            <button type="button" class="btn-grad" onclick="mines()">button</button>
-          <img id="mainPhoto" width="1100px" height="653px">
-          <button type="button"  class="btn-grad" onclick="sum()">button</button>
-          <div class="mainSlider">
-            <img src="photoFromInternet1"  style="display: none">
-            <img src="photoFromInternet2*"  style="display: none">
-            <img src="photoFromInternet3"  style="display: none">
-          </div>
-        </a>
-      </div>
+        <div id="slider">
+            <button type="button" class="btn-grad" id="prevBtn">Previous</button>
+            <img id="mainPhoto" src="./img/back-img.jpg" width="1100px" height="653px">
+            <button type="button" class="btn-grad" id="nextBtn">Next</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
