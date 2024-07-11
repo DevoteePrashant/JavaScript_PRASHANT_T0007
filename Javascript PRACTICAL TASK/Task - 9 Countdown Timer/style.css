@@ -13,7 +13,7 @@
           }
 
           .btn-grad:hover {
-            background-position: right center;
+            background-position: right center; /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
           }
@@ -21,8 +21,3 @@
             text-align: center;
         }
         
-
-        body{
-          height: 675px;
-  background-image: linear-gradient(to bottom right, rgb(0, 89, 255), rgb(195, 0, 255), rgb(160, 7, 71));
-        }
