@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>count </title>
+    <title>guess </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="lastMain">
         <div id="slider">
-            <h3>Task - 8 Countdown Timer Task</h3>
-            <input type="text" id="getall">
-            <h3 ><span id="second1"></span></h3>
-            <button onclick="count()" class="btn-grad">count</button>
+            <h3>Task - 8 Guess the Number Game Task</h3>
+            <input type="number" id="field_find"><br>
+            <button type="button" class="btn-grad lastMain" id="Guess">Guess</button>
+            <div id="error"></div>  
+            <h3 id="show"></h3>
         </div>
     </div>
     <script src="./script.js"></script>
