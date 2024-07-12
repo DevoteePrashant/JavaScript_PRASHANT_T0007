@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Builder</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dynamic Form Builder</h2>
+
+<div id="formContainer"></div>
+<button onclick="addField()">Add Field</button>
+<button onclick="generateForm()">Generate Form</button>
+
+<script>
+let fieldCount = 0;
+
+function addField() {
+    fieldCount++;
+    const container = document.getElementById('formContainer');
+    const fieldDiv = document.createElement('div');
+    fieldDiv.className = 'form-group';
+    fieldDiv.innerHTML = `
+        <label for="field${fieldCount}">Field ${fieldCount}:</label>
+        <input type="text" id="field${fieldCount}" name="field${fieldCount}">
+        <select id="type${fieldCount}">
+            <option value="text">Text</option>
+            <option value="number">Number</option>
+            <option value="checkbox">checkbox</option>
+        </select>
+    `;
+    container.appendChild(fieldDiv);
+}
+
+function generateForm() {
+    let formHTML = '<form>';
+    for (let i = 1; i <= fieldCount; i++) {
+        const fieldName = document.getElementById(`field${i}`).value;
+        const fieldType = document.getElementById(`type${i}`).value;
+        formHTML += `
+            <div class="form-group">
+                <label for="${fieldName}">${fieldName}:</label>
+                <input type="${fieldType}" id="${fieldName}" name="${fieldName}">
+            </div>
+        `;
+    }
+    formHTML += '<input type="submit" value="Submit"></form>';
+    document.body.innerHTML = formHTML;
+}
+</script>
+
+</body>
+</html>
