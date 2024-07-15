@@ -1,49 +1,49 @@
 <html>
 
 <head>
-    <tile>ChartJS Example</tile>
+    <title>ChartJS Example</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <style>
         .div {
             display: flex;
             flex-wrap: wrap;
-            /* height: 1200px; */
             width: 1200px;
         }
     </style>
 </head>
 
 <body>
-  ples select y value = salesCount, unicode
-  ,Discount
-    <select id="Mobiles" >
-        <option value="iPhone-13">iPhone 13</option>
-        <option value="Samsung-Galaxy-S21">Samsung Galaxy S21</option>
-        <option value="Google-Pixel-6">Google Pixel 6</option>
-        <option value="OnePlus-9">OnePlus 9</option>
-        <option value="Navigation">Navigation</option>
-        <option value="Xiaomi-Mi-11">Xiaomi Mi 11</option>
-    </select>
-    <span style="color: red;"> data fetch: y</span>
-    <select id="connect2" >
-        <option value="salesCount">salesCount</option>
-        <option value="unicode">unicode</option>
+    Last data fetch: X
+    <select id="Mobiles">
+        <option value="apple">Apple</option>
+        <option value="sememe">Sememe</option>
+        <option value="samsung">Samsung</option>
+        <option value="google">Google</option>
+        <option value="oneplus">OnePlus</option>
+        <option value="huawei">Huawei</option>
+    </select>y
+    <select id="connect2">
+        <option value="salesCount">Sales Count</option>
+        <option value="unicode">Unicode</option>
         <option value="Discount">Discount</option>
     </select>
     <canvas id="pie-chart" style="max-width: 600px;"></canvas>
 
-    <div class="div"><canvas id="myChart" style="max-width: 600px;"></canvas>
+    <div class="div">
+        <canvas id="myChart" style="max-width: 600px;"></canvas>
         <canvas id="myChart1" style="max-width: 600px;"></canvas>
     </div>
-    <div class="div"> <canvas id="myChart2" style="max-width: 600px;"></canvas>
+    <div class="div">
+        <canvas id="myChart2" style="max-width: 600px;"></canvas>
         <canvas id="myChart3" style="max-width: 600px;"></canvas>
     </div>
 
 </body>
 <script>
-    let courses = ["BCA", "MCA", "BA", "MA", "B.Tech"]// x ax
-    let students = [90, 100, 40, 40, 35] //y ax
-    let barColors = ["red", "yellow", "blue", "green", "orange"]
+    let courses = ["BCA", "MCA", "BA", "MA", "B.Tech"]; // x axis
+    let students = [90, 100, 40, 40, 35]; // y axis
+    let barColors = ["red", "yellow", "blue", "green", "orange"];
+
     new Chart("myChart", {
         type: 'bar',
         data: {
@@ -59,9 +59,9 @@
                 display: true,
                 text: 'Students Data'
             }
-
         }
     });
+
     new Chart("myChart1", {
         type: 'line',
         data: {
@@ -77,9 +77,9 @@
                 display: true,
                 text: 'Students Data'
             }
-
         }
     });
+
     new Chart("myChart2", {
         type: 'pie',
         data: {
@@ -95,9 +95,9 @@
                 display: true,
                 text: 'Students Data'
             }
-
         }
     });
+
     new Chart("myChart3", {
         type: 'polarArea',
         data: {
@@ -130,9 +130,9 @@
                 }
             }
         },
-    })
- 
- 
+    });
+
+
 </script>
-<script src="./script.js"></script>
+<script src="./script 2.js"></script>
 </html>
