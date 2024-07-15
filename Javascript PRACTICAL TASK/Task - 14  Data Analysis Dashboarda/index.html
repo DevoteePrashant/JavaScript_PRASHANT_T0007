@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <tile>ChartJS Example</tile>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        .div {
+            display: flex;
+            flex-wrap: wrap;
+            /* height: 1200px; */
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+  lest data fetch:
+    <select id="connect" onchange="loadQuestions()">
+        <option value="Mobiles"> ---- </option>
+        <option value="Smartphone">Smartphone</option>
+        <option value="Festinate">Festinate</option>
+        <option value="SIM-Kart">SIM-Kart</option>
+        <option value="Tablet">Tablet</option>
+        <option value="Navigation">Navigation</option>
+        <option value="USB-Stick">USB-Stick</option>
+        <option value="Specter">Specter</option>
+        <option value="PC">PC</option>
+        <option value="Notebook">Notebook</option>
+    </select>
+    <canvas id="pie-chart" style="max-width: 600px;"></canvas>
+
+    <div class="div"><canvas id="myChart" style="max-width: 600px;"></canvas>
+        <canvas id="myChart1" style="max-width: 600px;"></canvas>
+    </div>
+    <div class="div"> <canvas id="myChart2" style="max-width: 600px;"></canvas>
+        <canvas id="myChart3" style="max-width: 600px;"></canvas>
+    </div>
+
+</body>
+<script>
+    let courses = ["BCA", "MCA", "BA", "MA", "B.Tech"]// x ax
+    let students = [90, 100, 40, 40, 35] //y ax
+    let barColors = ["red", "yellow", "blue", "green", "orange"]
+    new Chart("myChart", {
+        type: 'bar',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+
+        }
+    });
+    new Chart("myChart1", {
+        type: 'line',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+
+        }
+    });
+    new Chart("myChart2", {
+        type: 'pie',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: true },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+
+        }
+    });
+    new Chart("myChart3", {
+        type: 'polarArea',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                r: {
+                    pointLabels: {
+                        display: true,
+                        centerPointLabels: true,
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Polar Area Chart With Centered Point Labels'
+                }
+            }
+        },
+    })
+    // var chart = new Chart(document.getElementById("pie-chart"), {
+    //     type: 'line',
+    //     data: {
+    //         labels: address,
+    //         datasets: [{
+    //             backgroundColor: barColors,
+    //             data: [11, 82, 43, 44, 25, 46, 47, 38, 69, 10],
+    //         }]
+    //     },
+    //     options: {
+    //         legend: { display: false },
+    //         title: {
+    //             display: true,
+    //             text: 'Students Data'
+    //         }
+
+    //     }
+    // });
+
+    const data = {
+  "Mobiles": [110, 200, 130, 70, 150, 80],
+  "SIM-Kart": [47, 38, 69, 10, 20, 30],
+  "Smartphone": [11, 82, 43, 44, 25, 46],
+  "Tablet": [40, 50, 160, 70, 120, 190],
+  "Specter": [47, 38, 69, 10, 20, 30],
+  "Navigation": [50, 60, 60, 80, 130, 80],
+  "USB-Stick": [160, 70, 280, 90, 100, 70],
+  "PC": [80, 90, 150, 110, 80, 130],
+  "Notebook": [47, 38, 69, 10, 20, 30],
+  "Festinate": [100, 110,80, 130, 40, 150]
+};
+
+async function loadQuestions() {
+  const chart = new Chart(document.getElementById("pie-chart"), {
+    type: 'line',
+    data: {
+      labels: Object.keys(data),
+      datasets: [{
+        backgroundColor: ["red", "yellow", "blue", "green", "orange"],
+        data: data["Mobiles"] // default data
+      }]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Students Data'
+      }
+    }
+  });
+
+  const selectElement = document.getElementById("connect");
+  selectElement.addEventListener("change", (e) => {
+    e.preventDefault()
+    const selectedValue = e.target.value;
+    chart.data.datasets[0].data = data[selectedValue];
+    chart.update(); // Update the chart
+  });
+}
+
+</script>
+
+</html>
