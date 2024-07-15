@@ -34,11 +34,39 @@ body {
   border: 1px solid #ccc;
   justify-content: space-between;
 }
+.lastMain {
+  text-align: center;
+}
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
+  margin: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+#checkbox1{
+padding: 12px;
+}
+
 .item .details {
   display: flex;
   align-items: center;
 }
-.item .details img {
+.item .details span  {
   height: 43px;
   width: 43px;
   pointer-events: none;
