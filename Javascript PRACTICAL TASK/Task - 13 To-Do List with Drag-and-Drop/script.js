@@ -8,7 +8,7 @@ const item = document.getElementById('item')
 
 submit.addEventListener('click', (event) => {
     event.preventDefault();
-    const newValue = getData.value.trim(); // Trim to remove leading/trailing whitespace
+    const newValue = getData.value.trim(); 
     if (!newValue) return;
     // const  newValue  = getData.value;
     // console.log(newValue2);
@@ -28,7 +28,7 @@ submit.addEventListener('click', (event) => {
 //delete 
 const deleteBtn = createLi.querySelector('.delete-btn');
 deleteBtn.addEventListener('click', () => {
-    createLi.remove(); // Remove the parent list item on delete button click
+    createLi.remove(); 
 });
 
 
@@ -50,25 +50,6 @@ deleteBtn.addEventListener('click', () => {
 });
 
 
-
-
-    // const items = sortableList.querySelectorAll(".item");
-    // items.className = "details";
-
-    // Array.from(items).forEach((item) => {
-    //     item.addEventListener("dragstart", () => {
-    //         //    greg value 
-    //         e.dataTransfer.setData('text/plain', '');
-    //         // change in web  class ad
-    //         setTimeout(() => item.classList.add("dragging"), 0);
-    //     });
-    //     // change in web        remove class
-    //     item.addEventListener("dragend", () => item.classList.remove("dragging"));
-    // });
-
-    
-
-    // }
     //    drag off
     sortableList.addEventListener("dragover", (e) => {
         e.preventDefault();
@@ -81,14 +62,7 @@ deleteBtn.addEventListener('click', () => {
         }
     });
 
-///dragging add 
-    // sortableList.addEventListener('drop', (e) => {
-    //     e.preventDefault();
-    //     const draggingItem = document.querySelector('.dragging');
-    //     let siblings = [...sortableList.querySelectorAll('.item')];
-    //     let nextSibling = siblings.find(sibling => e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2);
-    //     sortableList.insertBefore(draggingItem, nextSibling);
-    // });
+
 
     //  drag star
     sortableList.addEventListener("dragenter", e => {
@@ -119,21 +93,19 @@ deleteBtn.addEventListener('click', () => {
 
     
     // delete
-// Assuming you have a list with id="myList"
+//  list with id="myList"
 const list = document.getElementById('myList');
 
-// Function to create a delete button and attach it to each list item
 function addDeleteButtons() {
     const items = list.getElementsByTagName('li');
     for (let i = 0; i < items.length; i++) {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
         deleteBtn.addEventListener('click', function() {
-            this.parentNode.remove(); // Removes the parent <li> of the clicked button
+            this.parentNode.remove(); 
         });
         items[i].appendChild(deleteBtn);
     }
 }
 
-// Call the function to add delete buttons when needed
 addDeleteButtons();
