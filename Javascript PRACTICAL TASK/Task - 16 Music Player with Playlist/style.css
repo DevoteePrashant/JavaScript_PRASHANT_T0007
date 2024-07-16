@@ -1,0 +1,136 @@
+         
+         .btn-grad {
+            background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; 
+            color: #fff;
+            text-decoration: none;
+          }
+          .lastMain2 {
+            text-align: center;
+        }
+     
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+        }
+        
+        .lastMain {
+          max-width: 800px;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h3 {
+          margin-top: 0;
+        }
+                 
+.btn-grad {
+  background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
+  margin: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+        form {
+          margin-bottom: 20px;
+        }
+        
+        input[type="url"] {
+          /* width: 100%; */
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+        }
+        
+        button.add {
+          background-color: #4CAF50;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        button.add:hover {
+          background-color: #3e8e41;
+        }
+        
+        .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 23px;
+  place-items: start center;
+  margin-bottom: 700px;
+        }
+        
+        
+
+        .gallery img:active,
+        .gallery img:hover {
+          transform: scale(2.34);
+          z-index: 1;
+        }
+
+
+
+        .gallery img  {
+          width: 230px ;
+          height: 230px;
+          padding: 34px;
+          border-radius: 5px;
+        }
+
+        .playlistItem {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+        }
+        
+        .playlistItem img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          border-radius: 50%;
+        }
+        
+        .playlistItem span {
+          font-size: 16px;
+          font-weight: bold;
+          margin-right: 20px;
+        }
+        
+        .playlistItem audio {
+          width: 100%;
+        }
+        
+        .playlistItem:hover {
+          background-color: #f0f0f0;
+          cursor: pointer;
+        }

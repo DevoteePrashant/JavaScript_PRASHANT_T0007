@@ -1,9 +1,5 @@
-const form = document.querySelector('form');
-const urlInput = document.querySelector('#url');
 const addButton = document.querySelector('.add');
 const galleryContainer = document.querySelector('.gallery');
-
-const icon = document.createElement('div');
 
 const data = document.getElementById('text');
 
