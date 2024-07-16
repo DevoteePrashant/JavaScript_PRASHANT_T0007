@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+    <div class="lastMain2">
+        <h3>Task - 16 Music Player with Playlist </h3>
+        <h3>https://mp3.filmisongs.com/go.php?id=Damn%20Song%20Raftaar%20Ft%20KrSNa.mp3 </h3>
+       <br>
+       <input id="url" type="text" placeholder="Enter song URL">
+       <input id="title" type="text" placeholder="Enter song title">
+       <button id="add-btn">Add to Playlist</button>
+        <br>
+        <!-- controls -->
+        <audio id="myAudio">
+            <source src="./soces/YouTube Music_ Open the world of music. It's all here..mp4" type="audio/mp4">
+            <source src="./soces/YouTube Music Open the world of music. Its all here [TubeRipper.com].ogg"
+                type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="playAudio()" id="btn1" class="btn-grad"  type="button" style="padding: 16px; margin-top: 34px;font-size: 20px;  margin-left: auto;
+        margin-right: auto; display: block;"><i
+                class="fa-solid fa-pause"></i></button>
+        <button onclick="pauseAudio()" id="btn2" class="btn-grad"  type="button" style="padding: 16px; font-size: 20px; margin-top: 34px; margin-left: auto;
+        margin-right: auto; display: none;"><i
+                class="fa-regular fa-circle-play"></i></button>
+
+   
+                <button id="crate-btn"> <img width="66" height="66" src="https://img.icons8.com/windows/96/lounge-music-playlist.png" alt="lounge-music-playlist"/></button>
+
+                <div id="playlist-container">
+                
+                  <ul id="playlist">
+                    <!-- playlist items  -->
+                  </ul>
+                </div> 
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

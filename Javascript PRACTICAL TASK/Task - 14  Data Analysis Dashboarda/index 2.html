@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <title>ChartJS Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        .div {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    Last data fetch: X
+    <select id="Mobiles">
+        <option value="apple">Apple</option>
+        <option value="sememe">Sememe</option>
+        <option value="samsung">Samsung</option>
+        <option value="google">Google</option>
+        <option value="oneplus">OnePlus</option>
+        <option value="huawei">Huawei</option>
+    </select>y
+    <select id="connect2">
+        <option value="salesCount">Sales Count</option>
+        <option value="unicode">Unicode</option>
+        <option value="Discount">Discount</option>
+    </select>
+    <canvas id="pie-chart" style="max-width: 600px;"></canvas>
+
+    <div class="div">
+        <canvas id="myChart" style="max-width: 600px;"></canvas>
+        <canvas id="myChart1" style="max-width: 600px;"></canvas>
+    </div>
+    <div class="div">
+        <canvas id="myChart2" style="max-width: 600px;"></canvas>
+        <canvas id="myChart3" style="max-width: 600px;"></canvas>
+    </div>
+
+</body>
+<script>
+    let courses = ["BCA", "MCA", "BA", "MA", "B.Tech"]; // x axis
+    let students = [90, 100, 40, 40, 35]; // y axis
+    let barColors = ["red", "yellow", "blue", "green", "orange"];
+
+    new Chart("myChart", {
+        type: 'bar',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+        }
+    });
+
+    new Chart("myChart1", {
+        type: 'line',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+        }
+    });
+
+    new Chart("myChart2", {
+        type: 'pie',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            legend: { display: true },
+            title: {
+                display: true,
+                text: 'Students Data'
+            }
+        }
+    });
+
+    new Chart("myChart3", {
+        type: 'polarArea',
+        data: {
+            labels: courses,
+            datasets: [{
+                backgroundColor: barColors,
+                data: students,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                r: {
+                    pointLabels: {
+                        display: true,
+                        centerPointLabels: true,
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Polar Area Chart With Centered Point Labels'
+                }
+            }
+        },
+    });
+
+
+</script>
+<script src="./script 2.js"></script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./stlye.css">
+</head>
+<body>
+<a href="https://www.google.com/ture" class="myLink">goggle</a>
+<a href="https://maps.google.com/false" class="myLink">map</a>
+
+
+<h3 class="text-center">div select to log</h3>
+<div id="table">
+  <div onchange="selectedRowToInput()">
+  </div>
+  <div onchange="selectedRowToInput()">
+    <p><a href="https://maps.google.com/false" class="myLink">map</a></p>
+    <p><a href="https://www.google.com/false" class="myLink">goggle</a></p>
+    <p><a href="https://maps.google.com/false" class="myLink">data</a></p>
+  </div>
+</div>
+
+<script>
+  const links = document.getElementsByClassName('myLink');
+  Array.prototype.forEach.call(links, function(link) {
+    link.addEventListener('click', handle);
+  });
+
+  function handle(event) {
+    event.preventDefault();
+    let href = event.target.getAttribute('href');
+
+    if (href.includes('/false')) {
+      console.log('false');
+    } else {
+      window.location.href = href;
+    }
+  }
+
+  var rIndex,
+    table = document.getElementById("table");
+
+  function selectedRowToInput() {
+    for (var i = 1; i < table.children.length; i++) {
+      table.children[i].onclick = function() {
+        // get the selected row index
+        rIndex = this.rowIndex;
+     ;console.log(links[4].innerHTML);
+     ;console.log(links[2].innerHTML);
+     ;console.log(links[3].innerHTML);
+
+
+      };
+    
+    }
+  }
+  selectedRowToInput();
+</script>
+
+
+</body>
+</html>

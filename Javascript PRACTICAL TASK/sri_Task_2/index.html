@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cross Grid</title>
+</head>
+<body>
+  <div id="grid"></div>
+
+  <script>
+    let n = 15;
+    let gridHtml = '';
+    for (let i = 1; i <= n; i++) {
+      for (let j = 1; j <= n; j++) {
+        if (i == Math.ceil(n / 2) ) {
+          gridHtml += j;
+        }
+        else if( j == Math.ceil(n / 2)){
+            gridHtml +=i;
+        }
+        else {
+          gridHtml += "&nbsp;&nbsp;";
+        }
+      }
+      gridHtml += '<br>';
+    }
+
+    document.getElementById('grid').innerHTML = gridHtml;
+  </script>
+</body>
+</html>

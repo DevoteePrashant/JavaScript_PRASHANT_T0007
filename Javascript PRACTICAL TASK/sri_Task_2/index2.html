@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Grid</title>
+</head>
+
+<body>
+    <div id="Grid"></div>
+
+    <script>
+        let Grid = document.getElementById("Grid");
+        let final = "";
+        var n = 9;
+        if (n % 2 == 0) {
+            Grid.innerText = "Enter Odd Number:";
+        }
+        else {
+            swastika(n);
+        }
+        function swastika(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= n; j++) {
+                    let printf = "";
+                    if (i < Math.ceil(n / 2)) {
+                        if (j < Math.ceil(n / 2)) {
+                            if (j == 1)
+                                printf = j - i + Math.ceil(n / 2);
+                            else printf += `\xa0\xa0`;
+                        }
+                        else if (j == Math.ceil(n / 2)) {
+                            printf = i;
+                        }
+                        else {
+                            if (i == 1) {
+                                printf = (j - Math.floor(n / 2));
+                            }
+                        }
+                    }
+                    else if (i == Math.ceil(n / 2)) {
+                        printf = j;
+                    }
+                    else {
+                        if (j == Math.ceil(n / 2)) {
+                            printf = i;
+                        }
+                        else if (j == n) {
+                            printf = j - i + Math.ceil(n / 2);
+                        }
+                        else if (i == n) {
+                            if (j <= Math.ceil(n / 2) || j == n) {
+                                printf = j + Math.floor(n / 2);
+                            }
+                            else {
+                                printf += `\xa0\xa0`;
+                            }
+                        }
+                        else {
+                            printf += `\xa0\xa0`;
+                        }
+                    }
+                    final += printf.toString().padStart(2, " ") + " ";
+                }
+                final += "\n";
+            }
+            Grid.innerText = final;
+        }</script>
+</body>
+
+</html>

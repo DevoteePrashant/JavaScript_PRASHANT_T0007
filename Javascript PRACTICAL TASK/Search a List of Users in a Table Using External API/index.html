@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+</head>
+<body>
+  <div>
+    <div class="input-header">
+      <h1 class="text-center">Search a List of Users in a Table Using External API</h1>
+      <div class="text-center to-do-input">
+        <input type="text" class="form-control input" placeholder="Enter Your Name" id="username" aria-describedby="button-addon2">
+        <input type="checkbox" class="form-control input" id="completed" aria-describedby="button-addon2">
+        <button class="text-white" type="button" id="addUser">Add User</button>
+      </div>
+      <div class="filter">
+        <div class="justify-content-between">
+          <div class="to-do-input text-center">
+            Search: <input type="search" class="form-control" placeholder="Search..." id="search">
+          </div>
+        </div>
+      </div>
+      <div class="display">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="">#</th>
+              <th scope="">Your Name</th>
+              <th scope="">Completed</th>
+              <th scope="">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="records"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./index.js"></script>
+  </script>
+</body>
+</html>
