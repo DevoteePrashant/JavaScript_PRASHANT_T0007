@@ -62,6 +62,10 @@ body {
 padding: 12px;
 }
 
+#Delete{
+  border: none;
+}
+
 .item .details {
   display: flex;
   align-items: center;
