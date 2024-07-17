@@ -22,28 +22,28 @@ function subtraction(num1, num2) {
     if (!num1 ||!num2) {
         return "Please enter both numbers";
       }
-      if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+      if (isNaN(parseInt(num1)) || isNaN(parseInt(num2))) {
         return "Please enter valid numbers";
       }
-  return parseFloat(num1) - parseFloat(num2);
+  return parseInt(num1) - parseInt(num2);
 }
 function multiplication(num1, num2) {
     if (!num1 ||!num2) {
         return "Please enter both numbers";
       }
-      if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+      if (isNaN(parseInt(num1)) || isNaN(parseInt(num2))) {
         return "Please enter valid numbers";
       }
-  return parseFloat(num1) * parseFloat(num2);
+  return parseInt(num1) * parseInt(num2);
 }
 function division(num1, num2) {
     if (!num1 ||!num2) {
         return "Please enter both numbers";
       }
-      if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+      if (isNaN(parseInt(num1)) || isNaN(parseInt(num2))) {
         return "Please enter valid numbers";
       }
-  return parseFloat(num1) / parseFloat(num2);
+  return parseInt(num1) / parseInt(num2);
 }
 
 sumButton.addEventListener('click', (event) => {
