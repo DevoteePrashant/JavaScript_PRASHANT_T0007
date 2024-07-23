@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Page</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/media.css">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .order-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .order-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <div class="left"> <a href="../Shopping/Shopping.html">Shofy.</a> </div>
+            <div class="mid">
+                <a href="../Shopping/Shopping.html">Home</a>
+                <a href="../Shopping/Shopping.html">Products</a>
+                <a href="../About/About.html">About</a>
+            </div>
+            <div class="right">
+              <a href="../order page/order_page.html">  <i class="fa-solid fa-cart-shopping" style="font-size: 32px;color: #0989FF;"></i></a>
+              <a href="../Login/login.html">  <i class="fa-solid fa-user" style="font-size: 32px;color: #0989FF;padding-left: 16p;"></i></a>
+            </div>
+        </nav>
+
+        <div class="order-container">
+            <h1>Order Page</h1>
+            <div id="order-list"></div>
+            <div id="total-price"></div>
+           <a href="../Shopping/Shopping.html"> <button  class="gty data" > checkout  </button></a>
+        </div>
+
+
+        <footer id="footer">
+            <div class="leftFooter">
+                <h3>DOWNLOAD OUR APP</h3>
+                <p>Download App for Android and iOS Mobile Phones</p>
+                <i class="fa-brands fa-google-play"
+                    style="font-size: 32px;color: #0989FF;"></i>
+                <i class="fa-brands fa-app-store-ios"
+                    style="font-size: 32px;color: #0989FF;padding-top: 16px;"></i>
+            </div>
+            <div class="midFooter">
+                <h1>shofy.</h1>
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits
+                    Of Clothes Accessible to the Many</p>
+                <p>Copyright &copy; | shofy.</p>
+            </div>
+            <div class="rightFooter">
+                <h4>Follow US</h4>
+                <a href="https://www.instagram.com">Instagram</a>
+                <a href="https://www.FaceBook.com">FaceBook</a>
+                <a href="https://www.youtube.com/channel">YouTube</a>
+            </div>
+        </footer>
+
+        <script>
+            // total
+             function updateTotalPrice() {
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+  let totalPrice = 0;
+
+  orders.forEach(order => {
+    totalPrice += order.price;
+  });
+
+  const totalPriceDiv = document.getElementById("total-price");
+  totalPriceDiv.innerHTML = `
+    <p>Total Price: $${totalPrice.toFixed(2)}</p>
+  `;
+}
+    document.addEventListener('DOMContentLoaded', () => {
+  const orderListDiv = document.getElementById('order-list');
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+ 
+updateTotalPrice()
+
+
+  if (orders.length > 0) {
+    orderListDiv.innerHTML = orders.map(order => `
+      <div class="order-item" data-id="${order.id}">
+        <p>Product ID: ${order.id}</p>
+        <p>Product Title: ${order.title}</p>
+        <p>Product Price: $${order.price}</p>
+       <button class="delete-btn" onclick="removeOrderFromLocalStorage(${order.id})">Delete Order</button>
+      </div>
+    `).join('');
+    addDeleteButtonListeners()
+  } else {
+    orderListDiv.innerHTML = '<p>No products selected.</p>';
+  }
+  
+});
+
+function addDeleteButtonListeners() {
+  document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const itemDiv = this.parentElement;
+      const itemId = itemDiv.getAttribute('data-id');
+      let items = JSON.parse(localStorage.getItem('orders')) || [];
+      items = items.filter(item => item.id !== itemId);
+      localStorage.setItem('orders', JSON.stringify(items));
+
+      itemDiv.remove();
+      updateList();
+    });
+  });
+  updateTotalPrice()
+}
+
+function updateList() {
+  const orderListDiv = document.getElementById('order-list');
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+  if (orders.length > 0) {
+    orderListDiv.innerHTML = orders.map(order => `
+      <div class="order-item" data-id="${order.id}">
+        <p>Product ID: ${order.id}</p>
+        <p>Product Title: ${order.title}</p>
+        <p>Product Price: $${order.price}</p>
+        <button class="delete-btn" onclick="removeOrderFromLocalStorage(${order.id})">Delete Order</button>
+      </div>
+    `).join('');
+  } else {
+    orderListDiv.innerHTML = '<p>No products selected.</p>';
+  }
+  updateTotalPrice()
+}
+function removeOrderFromLocalStorage(orderId) {
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+  const newOrders = orders.filter(order => order.id !== orderId);
+
+  localStorage.setItem('orders', JSON.stringify(newOrders));
+
+  updateList();
+  updateTotalPrice()
+}
+
+    </script>
+    </body>
+</html>

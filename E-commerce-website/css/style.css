@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+
+@font-face {
+  font-family: "Muli-Regular";
+  src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src: url("../fonts/muli/Muli-Bold.ttf");
+}
+input,
+textarea,
+select,
+button {
+  font-family: "Muli-Regular";
+  color: #333;
+  font-size: 13px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body{
+	font-size: 14px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 0;
+	padding: 0;
+  scroll-behavior: smooth;
+}
+.text_center{
+	text-align: center;
+}
+
+
+.product-grid {
+	display: inline-block; margin: 10px;
+  }
+  .data {
+    float: right;
+    margin-top: -29px;
+  }
+
+.productItems{	
+	width: 398px;
+	height: 400px;
+	background-color: #b0cce7;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #0989FF;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: ease-in-out 0.4s;
+	flex-grow: 1;
+	flex-basis: 300px;
+}
+
+.box_img{
+	height: 200px;
+	overflow: hidden;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+}
+.box_img > img {
+	border-radius: 8px;
+	height: 200px;
+	object-fit: cover;
+  }
+
+.productItems:hover{
+	scale: 1.05;
+	cursor: pointer;
+	box-shadow: 2px 2px 10px #72abe5;
+	transition: ease-in-out 0.4s;
+}
+
+
+.product_tile {
+	display: flex;
+	flex-direction: column;
+	padding: 0 12px 0 12px;
+	width: 90%;
+    height: 220px;
+	padding: 20px;
+	border-radius: 10px;
+  }
+  #productDiv {
+	white-space: nowrap;
+  }
+  
+  .btn_show {
+	min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+  }
+  
+  .atc-btn {
+	width: 85%;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #050606;
+  color: white;
+	border: none;
+	border-radius: 8px;
+	font-weight: bold;
+	border: 1px solid #0989FF;
+	transition: ease-in-out 0.3s;
+  }
+  .atc-btn > img {
+	height: 20px;
+  }
+  .atc-btn img{
+    color: white;
+  }
+  .atc-btn img:hover {
+color: #000 !important;
+  }
+  .flout{
+    margin-left: auto;
+  }
+  .wl-btn {
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #050606;
+	border: none;
+	border-radius: 8px;
+	font-weight: bold;
+	border: 1px solid #0989FF;
+	transition: ease-in-out 0.3s;
+  }
+  .wl-btn > img {
+	height: 20px;
+  }
+  .productname {
+	font-size: 16px;
+	color: #0989FF;
+	height: 100px;
+	overflow: hidden;
+	margin: 0;
+  }
+  .cardheader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 30px;
+  }
+  .productcode {
+	font-size: 10px;
+	font-weight: bold;
+	color: #050606;
+  }
+  .productrating {
+	color: #050606;
+  font-size: 19px;
+	font-weight: bold;
+	display: flex;
+  }
+  .productrating > img {
+	height: 15px;
+  }
+  
+  .discountedprice {
+	font-weight: bold;
+	font-size: 22px;
+	height: 12px;
+  padding-bottom: 28px;
+	color: #050606;
+  }
+  
+  button:hover {
+	cursor: pointer;
+	background-color: rgb(255, 253, 253);
+  color: #000;
+	transition: ease-in-out 0.3s;
+  }
+  
+  .gty{
+    width: 11vmax;
+    padding: 1vmax;
+    border: none;
+    border-radius: 2vmax;
+    color: white;
+    background-color: #0989FF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    margin-left: 2%;
+}
+.gty:hover{
+  background-color: #00c6ff;
+}
+.input-group.error .error {
+  color: red;
+}
+
+nav{
+   
+    height: 4vmax;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.174);
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    z-index: 10000;
+}
+.left{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.left>a{
+    text-decoration: none;
+    color: #0989FF;
+    font-size: 2vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mid{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: stretch;
+}
+.mid>a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mid>a:hover{
+    border-bottom:2px solid #0989FF;
+    color: #0989FF;
+}
+.right{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.right>img{
+
+    width: 2.5vmax;
+    margin: 1vmax;
+    cursor: pointer;
+
+}
+.home{
+   
+    height: 90vh;
+    background-image: radial-gradient(white ,  rgb(184, 184, 223));
+     display: flex;
+}
+
+.container{
+    width: 100%;
+}
+
+#rightContainer{
+    display: flex;
+    justify-content: flex-end;
+}
+#rightContainer>img{
+    margin-right: 7vmax;
+    filter: drop-shadow(0 0 20px black);
+}
+#leftContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 3vmax;
+    box-sizing: border-box;
+    justify-content: center;
+    
+}
+#leftContainer>h1{
+    font-size: 5vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+#leftContainer>h2{
+    font-size: 2vmax;
+    font-family: sans-serif;
+    
+    margin-top: -10%;
+}
+#leftContainer>p{
+    font-size: 1.2vmax;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 2%;
+}
+#leftContainer>button{
+    width: 11vmax;
+    padding: 1vmax;
+    border: none;
+    border-radius: 2vmax;
+    color: white;
+    background-color: #0989FF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    margin-left: 2%;
+}
+#leftContainer>button:hover{
+ background-color: #0989FF;
+}
+
+
+/*  ------------------------------------------section 2 -------------------------------------------------------------- */
+
+
+
+
+@font-face {
+  font-family: "Muli-Regular";
+  src: url("../fonts/muli/Muli-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src: url("../fonts/muli/Muli-Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli-Regular";
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Muli-Regular";
+  color: #333;
+  font-size: 13px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  min-width: 850px;
+  margin: auto;
+  padding-top: 68px;
+  padding-bottom: 48px;
+  background: url("../images/registration-form-2.jpg");
+}
+
+.inner h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "Muli-Bold";
+  text-align: center;
+  margin-bottom: 32px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+form {
+  width: 50%;
+  padding-left: 45px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group .form-wrapper {
+  width: 50%;
+}
+
+.form-group .form-wrapper:first-child {
+  margin-right: 20px;
+}
+
+.form-wrapper {
+  margin-bottom: 17px;
+}
+
+.form-wrapper label {
+  margin-bottom: 9px;
+  display: block;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-family: "Muli-Bold";
+  background: none;
+}
+
+.form-control:focus {
+  border: 1px solid #ae3c33;
+}
+
+select {
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .inner {
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    min-width: auto;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  form {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+
+#products>h1{
+    text-align: center;
+    margin: 5vmax auto;
+    font-size: 2.5vmax;
+    width: 30vw;
+    padding: 1vmax;
+    border-bottom: 4px solid #0989FF;
+}
+
+.productsContainer{
+    display: flex;
+    height: 100%;
+    max-width: 80vw;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+footer{
+    background-color: rgb(39, 36, 36);
+    color: white;
+    display: flex;
+    padding: 2vmax;
+    
+}
+
+.leftFooter{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leftFooter>h4{
+font-family: 'Courier New', Courier, monospace;
+text-decoration: underline;
+}
+.leftFooter>p{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.leftFooter>img{
+    width: 10vmax;
+    margin: 1vmax;
+    cursor: pointer;
+}
+.midFooter{
+    width:60%;
+    text-align: center;
+}
+
+.midFooter>h1{
+    font-size: 4vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0989FF;
+}
+.midFooter>p{
+    max-width: 60%;
+    margin: 1vmax auto;
+}
+
+.rightFooter{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rightFooter>h4{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 1.4vmax;
+text-decoration: underline;
+
+}
+.rightFooter>a{
+ text-decoration: none;
+ color: white;
+ margin: 0.5vmax;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: 1.3vmax;
+
+}
+
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  min-width: 850px;
+  margin: auto;
+  padding-top: 68px;
+  padding-bottom: 48px;
+  background: url("../images/registration-form-2.jpg");
+}
+
+.inner h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "Muli-Bold";
+  text-align: center;
+  margin-bottom: 32px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+form {
+  width: 50%;
+  padding-left: 45px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group .form-wrapper {
+  width: 50%;
+}
+
+.form-group .form-wrapper:first-child {
+  margin-right: 20px;
+}
+
+.form-wrapper {
+  margin-bottom: 17px;
+}
+
+.form-wrapper label {
+  margin-bottom: 9px;
+  display: block;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  display: block;
+  width: 85%;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-family: "Muli-Bold";
+  background: none;
+}
+
+.form-control:focus {
+  border: 1px solid #ae3c33;
+}
+
+select {
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+  .inner {
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    min-width: auto;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  form {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
