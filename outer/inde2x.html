@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo2"></div>
+    <div id="demo"></div>
+    <script>
+        //      for (let i = 0; i <= 6; i++) {
+        //     let line = '';
+        //     for (let j = 0; j <= 6; j++) {
+        //         if ((j === 3 && i >= 0) || (i === 3 && j >= 0) || (j === 0 && i <= 2) || (i === 0 && j >= 4) || (i === 6 && j <= 2) || (j === 6 && i >= 4)) {
+        //             line += '* ';
+        //         } else {
+        //             line += '  ';
+        //         }
+        //     }
+        //     console.log(line);
+
+        // }
+        // function printPattern(n) {
+        //     for (let i = 0; i < n; i++) {
+        //         let row = "";
+        //         for (let a = 0; a < n; a++) {
+        //             if (i == Math.floor(n / 2) || a == Math.floor(n / 2 )) {
+        //                 row += "+";
+        //             } else {
+        //                 row += " ";
+        //             }
+        //         }
+        //         console.log(row);
+        //     }
+        // }
+
+        // printPattern(9);
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            function printCombinedPattern(n) {
+                if (n % 2 === 0) {
+                    console.log("Please enter an odd number for better pattern symmetry.");
+                    return;
+                }
+
+                let result = '';
+
+                var min = ''
+                for (let a = 1; a <= n/2; a++) {
+                    let result2 = "";
+                    for (let k = 0; k < a * 2 - 1; k++) {
+                        if (k === 2 * a - 2) {
+                            result2 += "*";
+                        }
+                        else {
+                            result2 += "\xa0 ";
+                        }
+                    }
+                    min += result2 + "\n";
+                }
+                document.getElementById('demo2').innerText = min;
+                
+
+                for (let i = 0; i < n; i++) {
+                    
+                            result += "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0";
+                        
+                    for (let j = 0; j < n; j++) {
+                        if (i === Math.floor(n / 2) || j === Math.floor(n / 2)) {
+                            result += " +";
+                        } else if (i < n / 2) {
+                            if (j < n / 2) {
+                                if (j === 0) {
+                                    result += ' * ';
+
+                                } else {
+                                    result += '\xa0\xa0\xa0';
+                                }
+                            } else if (j === n / 2) {
+                                result += ' *';
+                            } else {
+                                if (i === 0) {
+                                    result += ' *';
+                                } else {
+                                    result += '\xa0';
+                                }
+                            }
+                        } else if (i === n / 2) {
+                            result += '+ ';
+                        } else {
+                            if (j === n / 2 || j === n - 1) {
+                                result += '\xa0\xa0\xa0*';
+                            } else if (i === n - 1) {
+                                if (j <= n / 2 || j === n - 1) {
+                                    result += '  *  ';
+                                }
+                                else if (j <= n / 2 || j === n - 1) {
+                                    result += '\xa0\xa0\xa0';
+                                }
+                                //     ffff
+                                else {
+                                    result += '\xa0\xa0\xa0';
+                                }
+
+                            } else if (i === n / 4 || i === 3 * n / 4) {
+                                result += '+';
+                            } else {
+                                result += '\xa0\xa0\xa0';
+                            }
+                        }
+                    }
+                    result += '\n';
+                }
+
+
+                document.getElementById('demo').innerText = result;
+            }
+
+            printCombinedPattern(15);
+        });
+    </script>
+</body>

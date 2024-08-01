@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid</title>
+</head>
+
+<body>
+    <div id="Grid"></div>
+
+    <script>
+   function printSwastika(n) {
+    if (n % 2 === 0) {
+        console.log("Please enter an odd number for better pattern symmetry.");
+        return;
+    }
+
+    let result = '';
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (i < n / 2) {
+                if (j < n / 2) {
+                    if (j === 0) {
+                        result += '*';
+                    } else {
+                        result += ' ';
+                    }
+                } else if (j === n / 2) {
+                    result += '*';
+                } else {
+                    if (i === 0) {
+                        result += '*';
+                    } else {
+                        result += ' ';
+                    }
+                }
+            } else if (i === n / 2) {
+                result += '*';
+            } else {
+                if (j === n / 2 || j === n - 1) {
+                    result += '*';
+                } else if (i === n - 1) {
+                    if (j <= n / 2 || j === n - 1) {
+                        result += '*';
+                    } else {
+                        result += ' ';
+                    }
+                } else {
+                    if (i === n / 4 || i === 3 * n / 4 || j === n / 4 || j === 3 * n / 4) {
+                        result += '+';
+                    } else {
+                        result += ' ';
+                    }
+                }
+            }
+        }
+        result += '\n';
+    }
+    console.log(result);
+    document.getElementById('Grid ').innerHTML += result
+}
+
+printSwastika(19);
+    </script>
+</body>
+
+</html>
